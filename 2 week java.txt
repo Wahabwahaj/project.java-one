@@ -1,0 +1,207 @@
+Abstraction and Encapsulation
+
+
+
+
+
+
+1.# Python program demonstrate  
+2.# abstract base class work   
+3.from abc import ABC, abstractmethod   
+4.class Car(ABC):   
+5.    def mileage(self):   
+6.        pass  
+7.  
+8.class Tesla(Car):   
+9.    def mileage(self):   
+10.        print("The mileage is 30kmph")   
+11.class Suzuki(Car):   
+12.    def mileage(self):   
+13.        print("The mileage is 25kmph ")   
+14.class Duster(Car):   
+15.     def mileage(self):   
+16.          print("The mileage is 24kmph ")   
+17.  
+18.class Renault(Car):   
+19.    def mileage(self):   
+20.            print("The mileage is 27kmph ")   
+21.          
+22.# Driver code   
+23.t= Tesla ()   
+24.t.mileage()   
+25.  
+26.r = Renault()   
+27.r.mileage()   
+28.  
+29.s = Suzuki()   
+30.s.mileage()   
+31.d = Duster()   
+32.d.mileage()  
+
+
+
+
+class Employee:
+    # constructor
+    def __init__(self, name, salary, project):
+        # data members
+        self.name = name
+        self.salary = salary
+        self.project = project
+
+  
+    def show(self):
+        # accessing public data member
+        print("Name: ", self.name, 'Salary:', self.salary)
+
+    # method
+    def work(self):
+        print(self.name, 'is working on', self.project)
+
+# creating object of a class
+emp = Employee('wahab', 8000, 'NLP')
+
+# calling public method of the class
+emp.show()
+emp.work()
+
+Relationships
+
+# In rectangle_square_demo.py
+
+class Rectangle:
+    def __init__(self, length, height):
+        self._length = length
+        self._height = height
+
+    @property
+    def area(self):
+        return self._length * self._height
+Python# In rectangle_square_demo.py
+
+class Square(Rectangle):
+    def __init__(self, side_size):
+        super().__init__(side_size, side_size)
+# In rectangle_square_demo.py
+
+class Rectangle:
+    def __init__(self, length, height):
+        self._length = length
+        self._height = height
+
+    @property
+    def area(self):
+        return self._length * self._height
+
+    def resize(self, new_length, new_height):
+        self._length = new_length
+        self._height = new_height
+
+has Relationships
+
+# In productivity.py
+
+class _ProductivitySystem:
+    def __init__(self):
+        self._roles = {
+            'manager':wahab,
+            'secretary': SecretaryRole,
+            'sales': SalesRole,
+            'factory': FactoryRole,
+        }
+
+    def get_role(self, role_id):
+        role_type = self._roles.get(role_id)
+        if not role_type:
+            raise ValueError('role_id')
+        return role_type()
+
+    def track(self, employees, hours):
+        print('Tracking Employee Productivity')
+        print('==============================')
+        for employee in employees:
+            employee.work(hours)
+        print('')
+
+# Role classes implementation omitted
+
+_productivity_system = _ProductivitySystem()
+
+def get_role(role_id):
+    return _productivity_system.get_role(role_id)
+
+def track(employees, hours):
+    _productivity_system.track(employees, hours)
+
+Aggregation
+
+
+
+
+class Salary:
+    def __init__(self, pay, bonus):
+        self.pay = pay
+        self.bonus = bonus
+  
+    def annual_salary(self):
+        return (self.pay*12)+self.bonus
+  
+  
+
+class EmployeeOne:
+  
+   
+    def __init__(self, name, age, sal):
+        self.name = name
+        self.age = age
+  
+        # initializing the sal parameter
+        self.agg_salary = sal   # Aggregation
+  
+    def total_sal(self):
+        return self.agg_salary.annual_salary()
+  
+
+salary = Salary(10000, 1500)
+
+emp = EmployeeOne('Geek', 25, salary)
+  
+print(emp.total_sal())
+
+
+
+
+Composition
+
+
+  
+
+class Salary:
+    def __init__(self, pay, bonus):
+        self.pay = pay
+        self.bonus = bonus
+  
+    def annual_salary(self):
+        return (self.pay*12)+self.bonus
+  
+on
+class EmployeeOne:
+    def __init__(self, name, age, pay, bonus):
+        self.name = name
+        self.age = age
+  
+        
+        self.obj_salary = Salary(pay, bonus)  # composition
+  
+    
+    def total_sal(self):
+        return self.obj_salary.annual_salary()
+  
+
+emp = EmployeeOne('Geek', 25, 10000, 1500)
+  
+
+print(emp.total_sal())
+ 
+
+ 
