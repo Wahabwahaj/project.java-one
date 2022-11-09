@@ -1,0 +1,152 @@
+"""
+from collections import Counter
+
+# With sequence of items
+print(Counter(['B' ,'B' ,'A' ,'B' ,'C' ,'A' ,'B',
+               'B' ,'A' ,'C']))
+
+# with dictionary
+print(Counter({'A' :3, 'B' :5, 'C' :2}))
+
+# with keyword arguments
+print(Counter(A=3, B=5, C=2))
+
+this is an order dictc
+
+from collections import OrderedDict
+
+print("This is a Dict:\n")
+d = {}
+d['a'] = 1
+d['b'] = 2
+d['c'] = 3
+d['d'] = 4
+
+for key, value in d.items():
+    print(key, value)
+
+print("\nThis is an Ordered Dict:\n")
+od = OrderedDict()
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+
+for key, value in od.items():
+    print(key, value)
+= == == == == == == ==
+
+# deque
+
+
+from collections import deque
+
+# Declaring deque
+queue = deque(['name' ,'age' ,'DOB'])
+
+print(queue)
+
+= == == == == == == == == == == == == ==
+
+from collections import deque
+
+# init deque
+de = deque([3, 4, 5])
+
+
+de.append(6)
+
+# printing modified deque
+print("The deque after appending at right is : ")
+print(de)
+
+
+de.appendleft(9)
+
+
+print("The deque after appending at left is : ")
+print(de)
+
+= == == == == == == == == == == == == == ==
+
+
+
+from collections import UserList
+
+
+
+class MyList(UserList):
+
+
+    def remove(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+
+    def pop(self, s = None):
+        raise RuntimeError("Deletion not allowed")
+
+# Driver's code
+L = MyList([1, 2, 3, 4])
+
+print("Original List")
+
+# Inserting to List"
+L.append(5)
+print("After Insertion")
+print(L)
+
+# Deleting From List
+L.remove()
+
+
+"""
+"""
+# access list
+data1=[1,2,3,4];
+data2=['x','y','z'];
+data3=[12.5,11.6];
+data4=['raman','rahul'];
+data5=[];
+data6=['wahab',10,56.4,'a'];
+print(data6)
+
+"""
+
+
+"""
+#Accessing Tuple Example
+
+data1=(1,2,3,4)
+data2=('x','y','z')
+print(data1[0])
+print(data1[0:2])
+print(data2[-3:-1])
+print(data1[0:])
+print(data2[:2])
+
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

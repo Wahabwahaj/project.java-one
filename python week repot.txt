@@ -1,0 +1,239 @@
+class Animal: 
+    def eat(self):
+      print 'Eating...'
+class Dog(Animal):
+   def bark(self):
+      print 'Barking...'
+class BabyDog(Dog):
+    def weep(self):
+        print 'Weeping...'
+d=BabyDog()
+d.eat()
+d.bark()
+d.weep()
+
+
+class Student:
+    # Constructor - non parameterized
+    def __init__(self):
+        print("This is non parametrized constructor")
+    def show(self,name):
+        print("Hello",name)
+student = Student()
+student.show("wahab")
+
+class Student:
+    # Constructor - parameterized
+    def __init__(self, name):
+        print("This is parametrized constructor")
+        self.name = name
+    def show(self):
+        print("Hello",self.name)
+student = Student("wahab")
+student.show()
+
+
+
+===============inhertan
+class DerivedClassName(BaseClassName):
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+
+
+
+
+class DerivedClassName(modulename.BaseClassName):
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+
+
+
+
+class Animal: 
+    def eat(self):
+      print 'Eating...'
+class Dog(Animal):   
+   def bark(self):
+      print 'Barking...'
+d=Dog()
+d.eat()
+d.bark()
+
+
+
+class First(object):
+  def __init__(self):
+    super(First, self).__init__()
+    print("first")
+
+class Second(object):
+  def __init__(self):
+    super(Second, self).__init__()
+    print("second")
+
+class Third(Second, First):
+  def __init__(self):
+    super(Third, self).__init__()
+    print("third")
+
+Third();
+
+
+
+class Base1:
+    pass
+
+class Base2:
+    pass
+
+class MultiDerived(Base1, Base2):
+    pass 
+mult inhert===============
+
+
+
+tuples
+
+
+ data=(10,20,'ram',56.8)
+ data2="a",10,20.9
+ data
+(10, 20, 'ram', 56.8)
+ data2
+('a', 10, 20.9)
+
+
+
+data1=(1,2,3,4)
+data2=('x','y','z')
+print data1[0]
+print data1[0:2]
+print data2[-3:-1]
+print data1[0:]
+print data2[:2]
+
+
+
+
+
+=================== function
+
+
+Providing Function Definition
+def sum(x,y):
+   	 "Going to add x and y"
+  	  s=x+y
+   	 print "Sum of two numbers is"
+ 	   print s
+ 	   #Calling the sum Function
+  	  sum(10,20)
+  	  sum(20,30) 
+
+
+
+
+
+def sum(a,b):
+    		"Adding the two values"
+   		 print "Printing within Function"
+ print a+b
+    		return a+b
+def msg():
+    		print "Hello"
+    		return
+
+total=sum(10,20)
+print ?Printing Outside: ?,total
+msg()
+print "Rest of code"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from collections import Counter 
+    
+# With sequence of items  
+print(Counter(['B','B','A','B','C','A','B',
+               'B','A','C']))
+    
+# with dictionary 
+print(Counter({'A':3, 'B':5, 'C':2}))
+    
+# with keyword arguments 
+print(Counter(A=3, B=5, C=2))
+ 
+this is an order dictc
+  
+from collections import OrderedDict 
+    
+print("This is a Dict:\n") 
+d = {} 
+d['a'] = 1
+d['b'] = 2
+d['c'] = 3
+d['d'] = 4
+    
+for key, value in d.items(): 
+    print(key, value) 
+    
+print("\nThis is an Ordered Dict:\n") 
+od = OrderedDict() 
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+    
+for key, value in od.items(): 
+    print(key, value)
+ ===============
+
+#deque
+    
+  
+from collections import deque
+    
+# Declaring deque
+queue = deque(['name','age','DOB']) 
+    
+print(queue)
+ 
+===========================
+
+from collections import deque
+
+# init deque
+de = deque([3, 4, 5])
+
+
+de.append(6)
+
+# printing modified deque
+print("The deque after appending at right is : ")
+print(de)
+
+
+de.appendleft(9)
+
+
+print("The deque after appending at left is : ")
+print(de)
+
+=============================
